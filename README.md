@@ -50,4 +50,4 @@ The parameters are typed right after your `DataCatalog` is created, so any failu
 will surface before your kedro run starts.
 
 ## Contributions
-If you have any usefull kedro utilitie such as runners, hooks, datasets or whatever it is - feel free to open a PR!
+If you have any useful Kedro utilities such as runners, hooks, datasets or whatever it may be - PR's are very welcome!
