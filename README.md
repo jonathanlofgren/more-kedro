@@ -1,11 +1,15 @@
-# more-kedro
+# more-kedro  :wrench:
 
 A collection of utilities and extensions for [Kedro](https://github.com/quantumblacklabs/kedro)
+
+## Installation
+
+    $ pip install more-kedro
 
 ## [hooks.TypedParameters](more_kedro/hooks.py)
 Enables on the fly typing and validation of your parameter dictionaries.
 
-### Usage
+#### Usage
 Activate by adding the `TypedParameters` hook to your `KedroContext`:
 ```python
 from more_kedro.hooks import TypedParameters
