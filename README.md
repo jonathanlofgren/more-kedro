@@ -1,4 +1,4 @@
-# more-kedro  :wrench:
+# more-kedro :hammer_and_wrench:
 
 A collection of utilities and extensions for [Kedro](https://github.com/quantumblacklabs/kedro)
 
@@ -48,3 +48,6 @@ from the root of your project.
 
 The parameters are typed right after your `DataCatalog` is created, so any failures
 will surface before your kedro run starts.
+
+## Contributions
+If you have any usefull kedro utilitie such as runners, hooks, datasets or whatever it is - feel free to open a PR!
