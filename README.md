@@ -49,5 +49,24 @@ from the root of your project.
 The parameters are typed right after your `DataCatalog` is created, so any failures
 will surface before your kedro run starts.
 
+## [datasets.TryLoadDataSet](more_kedro/datasets.py)
+
+A dataset which uses an underlying dataset definition to load and save, but if the load method
+throws an exception it returns a default value instead. Can be used if the existence of some
+data is optional to the pipeline.
+
+### Usage
+`TryLoadDataSet` takes two arguments, `dataset` which is a normal dataset definition,
+and an optional `default_value` which is the value to return if the load fails
+(defaults to `None`). Example of an entry in `catalog.yml`:
+
+```yaml
+companies:
+  dataset:
+    type: pandas.CSVDataSet
+    filepath: "path/to/companies.csv"
+  default_value: null
+```
+
 ## Contributions
 If you have any useful Kedro utilities such as runners, hooks, datasets or whatever it may be - PR's are very welcome!
