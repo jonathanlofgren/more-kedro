@@ -1,10 +1,5 @@
 version: 2.1
 
-parameters:
-  dependency-file: requirements-dev.txt
-  pytest: true
-  tag: 3.8
-
 orbs:
   python: circleci/python@0.2.1
 
@@ -13,10 +8,18 @@ jobs:
     executor: python/default
     steps:
       - checkout
-      - python/load-cache
-      - python/install-deps
-      - python/save-cache
-      - python/test
+      - python/load-cache:
+          parameters:
+            dependency-file: requirements-dev.txt
+      - python/install-deps:
+          parameters:
+            dependency-file: requirements-dev.txt
+      - python/save-cache:
+          parameters:
+            dependency-file: requirements-dev.txt
+      - python/test:
+          parameters:
+            pytest: true
 
 workflows:
   main:
