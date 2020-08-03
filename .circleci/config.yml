@@ -9,17 +9,13 @@ jobs:
     steps:
       - checkout
       - python/load-cache:
-          parameters:
-            dependency-file: requirements-dev.txt
+          dependency-file: requirements-dev.txt
       - python/install-deps:
-          parameters:
-            dependency-file: requirements-dev.txt
+          dependency-file: requirements-dev.txt
       - python/save-cache:
-          parameters:
-            dependency-file: requirements-dev.txt
+          dependency-file: requirements-dev.txt
       - python/test:
-          parameters:
-            pytest: true
+          pytest: true
 
 workflows:
   main:
