@@ -12,7 +12,7 @@ with open("README.md", "r") as f:
 
 setuptools.setup(
     name="more-kedro",
-    version="0.1.0",
+    version="0.2.0",
     author="Jonathan Löfgren",
     author_email="lofgren021@gmail.com",
     description="A collection of utilities and extensions for Kedro",
