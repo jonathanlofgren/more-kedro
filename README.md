@@ -62,6 +62,7 @@ and an optional `default_value` which is the value to return if the load fails
 
 ```yaml
 companies:
+  type: more_kedro.datasets.TryLoadDataSet
   dataset:
     type: pandas.CSVDataSet
     filepath: "path/to/companies.csv"
